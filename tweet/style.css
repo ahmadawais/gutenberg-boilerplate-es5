@@ -1,0 +1,10 @@
+/**
+ * Note that these styles are loaded *before* editor styles, so that
+ * editor-specific styles using the same selectors will take precedence.
+ */
+.wp-block-aa-tweet {
+	color: #e1e8ed;
+	background: #1da1f2;
+	border: 2px solid #1da1f2;
+	padding: 20px;
+}

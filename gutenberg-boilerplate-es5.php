@@ -45,6 +45,13 @@ function gutenberg_boilerplate_es5_enqueue_editor_assets() {
 		filemtime( plugin_dir_path( __FILE__ ) . 'step-04/block.js' )
 	);
 
+	wp_enqueue_script(
+		'aa-tweet',
+		plugins_url( 'tweet/block.js', __FILE__ ),
+		array( 'wp-blocks', 'wp-i18n', 'wp-element' ),
+		filemtime( plugin_dir_path( __FILE__ ) . 'tweet/block.js' )
+	);
+
 	// Block styles for the editor.
 	wp_enqueue_style(
 		'gutenberg-boilerplate-es5-step02-editor',
@@ -63,6 +70,13 @@ function gutenberg_boilerplate_es5_enqueue_editor_assets() {
 		plugins_url( 'step-04/editor.css', __FILE__ ),
 		array( 'wp-edit-blocks' ),
 		filemtime( plugin_dir_path( __FILE__ ) . 'step-04/editor.css' )
+	);
+
+	wp_enqueue_style(
+		'aa-tweet-editor',
+		plugins_url( 'tweet/editor.css', __FILE__ ),
+		array( 'wp-edit-blocks' ),
+		filemtime( plugin_dir_path( __FILE__ ) . 'tweet/editor.css' )
 	);
 }
 add_action( 'enqueue_block_editor_assets', 'gutenberg_boilerplate_es5_enqueue_editor_assets' );
@@ -91,6 +105,13 @@ function gutenberg_boilerplate_es5_enqueue_common_assets() {
 		plugins_url( 'step-04/style.css', __FILE__ ),
 		array( 'wp-blocks' ),
 		filemtime( plugin_dir_path( __FILE__ ) . 'step-04/style.css' )
+	);
+
+	wp_enqueue_style(
+		'aa-tweet-front',
+		plugins_url( 'tweet/style.css', __FILE__ ),
+		array( 'wp-blocks' ),
+		filemtime( plugin_dir_path( __FILE__ ) . 'tweet/style.css' )
 	);
 }
 add_action( 'enqueue_block_assets', 'gutenberg_boilerplate_es5_enqueue_common_assets' );
